@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Quizr</title>
+        <link rel="stylesheet" href="styles_main.css">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+        <link	
+              rel="stylesheet"	
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row header">
+                <div class="col-xs-9 logo">
+                    <a href="index.html"><img  src="images/icons/brainstorm.png"><img  src="images/Quizr1.png" width="150" height="80"/></a>
+                </div>
+                <div class="col-xs-3">
+                    <a href="create_test.html"><img src="images/icons/add.png" class="small-menu-button" /><button class="head-menu-button" type="button">Створити тест</button></a>
+                </div>
+            </div>
+            <div class="row main-part">
+                <div class="col-md-4 col-sm-3"></div>
+                <div class="col-md-4 col-sm-6 login-part">
+                    <h3 style="font-size: 350%;color: #396C6D; font-family: Drina; text-align: center">Вже маєте аккаунт?</h3>
+                    <div class="form-group">
+                                    <input class="form-control" type="text" placeholder="Username" maxlength="25" required>
+                    </div>
+                    <div class="form-group">
+                                    <input class="form-control" type="password" placeholder="Password" required>
+                    </div>
+                        <input class='submit-button' type='submit' value='Готово' style="width: 100%;" /><br>
+                        <h3 style="font-size: 350%;color: #396C6D; font-family: Drina; text-align: center">Або ж хочете створити новий?</h3>
+                        <button id="registr" onclick="document.getElementById('registr').disabled = true;"class="submit-button" type="submit" style="width: 100%;">Створити аккаунт</button><br>
+                        <div class="registration" style='margin-top: 10px'></div>
+                        <script>
+                            $("#registr").click(function(){
+                                $(".registration").prepend("<div style='padding:15px; background-color:#529b9c; border-radius: 10px;'><div class='form-group'><input class='form-control' type='text' placeholder='ПІБ Користувача' maxlength='50' autofocus pattern='^[A-Za-zА-Яа-яЁё\s]+$' required><br><input class='form-control' type='text' placeholder='Країна' pattern='^[A-Za-zА-Яа-яЁё\s]+$'><br><input class='form-control' type='date' placeholder='Дата народження'><br><input class='form-control' type='text' placeholder='E-mail'  pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' required><br><input class='form-control' type='text' placeholder='Username' maxlength='25' required><br><input class='form-control' type='password' placeholder='Password' required></div><input class='submit-button' type='submit' value='Готово'style='width: 100%' /></div>");
+                            });
+                        </script>
+                </div>
+                <div class="col-md-4 col-sm-3"></div>
+            </div>
+        </div>
+    </body>
+</html>

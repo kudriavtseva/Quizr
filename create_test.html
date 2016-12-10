@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Quizr</title>
+        <link rel="stylesheet" href="styles_main.css">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+        <link	
+              rel="stylesheet"	
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row header">
+                <div class="col-xs-6 logo">
+                    <a href="index.html"><img  src="images/icons/brainstorm.png"><img  src="images/Quizr1.png" width="150" height="80"/></a>
+                </div>
+                <div class="col-xs-6">
+                    <div class="menu-buttons" style="float:right">
+                        <a href="login.html"><img src="images/icons/id-card.png" class="small-menu-button" /><button class="head-menu-button" type="button">Реєстрація/вхід</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row test-part">
+                <div class="col-md-4 col-sm-3"> </div>
+                <div class="col-md-4 col-sm-6">
+                    <label for="test-name">Назва тесту:</label>
+                    <div class="form-group"> 
+                            <input class="form-control" id="test-name" type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+                    <br>
+                        <label for="test-image">Обкладинка тесту:</label>
+                        <p><input multiple accept="image/*,image/jpeg" type="file" id="test-image">
+                      <label for="comment">Опис тесту:</label>
+                      <textarea class="form-control" rows="5" id="comment"></textarea>
+                    <br>
+                        <!--<label for="sel1">Кількість питань:</label>
+                          <select class="form-control" id="sel1">
+                            <option>1</option> 
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                          </select>
+                          <br>-->
+                    </div>
+                    <button id="add-questions"class="submit-button" type="submit" style="width: 100%;">Додати питання (не більше 15)</button>
+                    <script>
+                        var i=0;
+                        
+                            $("#add-questions").click(function(){
+                                
+                                
+                                    $(".questions").append("<div class='quest' style='margin: 20px; padding: 15px; background-color: #529b9c;border-radius: 10px;><label for='question'>Ваше пітання:</label><input class='form-control' type='text' id='question'pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' required><label for='right-answer'>Правільна відповідь:</label><input class='form-control' type='text' id='right-answer'pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' required><label for='wrong-answer'>Додаткова відповідь:</label><input class='form-control' type='text' id='wrong-answer'pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$' required><label for='question-image'>Картинка до питання:</label><p><input multiple accept= 'image/*,image/jpeg' type='file' id='question-image'><button class='submit-button' id='delete-quest'><img src='images/icons/cancel.png' /> Видалити питання</button> </div>")
+                                
+                                i++;
+                                if(i==15){
+                                    document.getElementById('add-questions').disabled = true;
+                                }
+                            }); 
+                            
+                                $('body').on('click', '#delete-quest', function(e) {
+                                    $(this).closest('.quest').remove();
+                                    i--;
+                                    if(i<15){
+                                        document.getElementById('add-questions').disabled = false;
+                                    }
+                                });
+                            
+                            
+                            
+                    </script>
+                    <div class="questions" style='margin-top: 10px'></div>
+                    <button class="submit-button" type="submit" style="width: 100%;">Створити тест</button>
+                </div>
+                <div class="col-md-4 col-sm-3"> </div>
+            </div>
+        </div>
+    </body>
+</html>
+    

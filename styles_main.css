@@ -1,0 +1,156 @@
+@font-face {
+    font-family: Drina;
+    src: url(fonts/10171.otf)
+   }
+body{
+    background-image: url(images/background.png);
+}
+.header{
+    background-color:  #529b9c;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+.title{
+    font-size: 350%; 
+    color: #396C6D; 
+    margin-left: 5%; 
+    font-family: Drina;
+}
+.head-menu-button, .side-menu-button, .submit-button{
+    margin-top: 15px;
+    margin-left: 5px;
+    border-radius: 10px;
+    border: 2px solid #ffcc5c;
+    padding: 10px;
+    height: 50px;
+    color: #529b9c;
+    background-color: #ffcc5c;
+    font-size: 120%;
+    box-shadow: 1px 1px 7px grey;
+}
+.head-menu-button:hover, .start-test-button:hover, .submit-button:hover{
+    border: 2px solid #ffcc5c;
+    background-color: #529b9c;
+    color: #ffcc5c;
+}
+.side-menu{
+    z-index: 1;
+    padding-top: 80px;
+}
+.test-part, .login-part{
+    padding-top: 80px;
+}
+.side-menu-button{
+    width: 80%;
+    height: 90px;
+    float: left;
+    text-align: right;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    opacity: 0.9;
+    border: none;
+    font-size: 150%;
+}
+
+.side-menu-button:hover{
+    width: 100%;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    font-size: 170%;
+    opacity: 1;
+}
+.test-icon{
+    margin-top: 20px;
+    background: #85B9B9;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 110%;
+    box-shadow: 1px 1px 7px grey;
+}
+.test-icon:hover{
+    transform: scale(1.05,1.05);
+    background-color: #529b9c;
+}
+.category-label{
+    background-color: #ffcc5c;
+}
+.test-title{
+    font-family: Drina;
+    font-size: 200%;
+}
+.category-name{
+    display: inline-block;
+}
+.start-test-button{
+    color: #529b9c;
+    background-color: #ffcc5c;
+    border-radius: 15px;
+    width: 100%;
+    height: 40px;
+    border: 2px solid #ffcc5c;
+    font-size: 130%;
+}
+.small-menu-button{
+    display: none;
+}
+.small-menu-button:hover{
+    transform: scale(1.1,1.1);
+    box-shadow: 0 0 10px dimgray;
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 1200px) { 
+    .category-name{ 
+        display: none 
+    }   
+    .header{
+        height: 80px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .title{
+        display: none;
+    }
+}
+@media only screen and (max-width: 990px) { 
+    .test-icon{ 
+        width: 60%; 
+    }   
+}
+@media only screen and (max-width: 800px) {
+    .small-menu-button{
+        display: inline-block;
+    }
+    .head-menu-button{
+        display: none;
+    }
+} 
+    
+@media only screen and (max-width: 600px) { 
+    .test-icon{ 
+        width: 100%; 
+    }   
+    .brainstorm{
+        display: none;
+    }
+ 
+
+}
+.question-card{
+    margin-top: 15px;
+    width: 100%;
+    background-color: #529b9c;
+    padding: 10px;
+    border-radius: 10px;
+}
+.quest-cover{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+.quest-title{
+    font-size: 150%;
+}

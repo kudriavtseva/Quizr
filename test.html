@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Quizr</title>
+        <link rel="stylesheet" href="styles_main.css">
+        <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+        <link	
+              rel="stylesheet"	
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row header">
+                <div class="col-xs-6 logo">
+                    <a href="index.html"><img  src="images/icons/brainstorm.png"><img  src="images/Quizr1.png" width="150" height="80"/></a>
+                </div>
+                <div class="col-xs-6">
+                    <div class="menu-buttons" style="float:right">
+                        <a href="create_test.html"><img src="images/icons/add.png" class="small-menu-button" /><button class="head-menu-button" type="button">Створити тест</button></a>
+                        <a href="login.html"><img src="images/icons/id-card.png" class="small-menu-button" /><button class="head-menu-button" type="button">Реєстрація/вхід</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row test-part">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6 question-card">
+                    <p><img src="images/tests/fantasticbeasts.jpg" class="quest-cover" /></p>
+                    <center><p class="quest-title">Запитання</p>
+                    <label class="radio-inline"><input type="radio" name="optradio">Відповідь 1 </label>
+                    <label class="radio-inline"><input type="radio" name="optradio">Відповідь 2</label></center>
+                    <button id="next-question" style="width:100%"class="submit-button">Далі<img src="images/icons/next.png" /></button>
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
+    </body>
+</html>
+    
